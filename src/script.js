@@ -32,6 +32,8 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight)
 // instantiate the controls
 const controls = new OrbitControls( camera, canvas );
+controls.enableDamping = true;
+controls.autoRotate = true;
 const renderloop = () =>{
  renderer.render(scene, camera)
   window.requestAnimationFrame(renderloop)
